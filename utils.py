@@ -21,7 +21,7 @@ from langchain_classic.chains import create_history_aware_retriever, create_retr
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from typing import List
-from sudachipy import tokenizer, dictionary
+from sudachipy import tokenizer, Dictionary
 from langchain_community.agent_toolkits import SlackToolkit
 from langchain.agents import AgentType, initialize_agent
 from langchain_community.document_loaders.csv_loader import CSVLoader
