@@ -12,62 +12,24 @@ import logging
 import sys
 import unicodedata
 from langchain_community.document_loaders import PyMuPDFLoader, Docx2txtLoader
-try:
-    from langchain.text_splitter import CharacterTextSplitter
-except Exception:
-    from langchain_text_splitters.character import CharacterTextSplitter
-
-try:
-    from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder, PromptTemplate
-except Exception:
-    from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder, PromptTemplate
-
-try:
-    from langchain.schema import HumanMessage, AIMessage
-except Exception:
-    from langchain_core.messages.human import HumanMessage
-    from langchain_core.messages.ai import AIMessage
+from langchain.text_splitter import CharacterTextSplitter
+from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder, PromptTemplate
+from langchain.schema import HumanMessage, AIMessage
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
-try:
-    from langchain.chains import create_history_aware_retriever, create_retrieval_chain
-except Exception:
-    from langchain_classic.chains import create_history_aware_retriever, create_retrieval_chain
-
-try:
-    from langchain.chains.combine_documents import create_stuff_documents_chain
-except Exception:
-    from langchain_classic.chains.combine_documents.stuff import create_stuff_documents_chain
+from langchain.chains import create_history_aware_retriever, create_retrieval_chain
+from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from typing import List
 from sudachipy import tokenizer, dictionary
 from langchain_community.agent_toolkits import SlackToolkit
-try:
-    from langchain.agents import AgentType, initialize_agent
-except Exception:
-    from langchain_classic.agents import AgentType, initialize_agent
+from langchain.agents import AgentType, initialize_agent
 from langchain_community.document_loaders.csv_loader import CSVLoader
 from langchain_community.retrievers import BM25Retriever
-try:
-    from langchain.retrievers import EnsembleRetriever
-except Exception:
-    from langchain_classic.retrievers import EnsembleRetriever
+from langchain.retrievers import EnsembleRetriever
 from docx import Document
-try:
-    from langchain.output_parsers import CommaSeparatedListOutputParser
-except Exception:
-    try:
-        from langchain_core.output_parsers import CommaSeparatedListOutputParser
-    except Exception:
-        from langchain_classic.output_parsers import CommaSeparatedListOutputParser
-
-try:
-    from langchain import LLMChain
-except Exception:
-    try:
-        from langchain_core import LLMChain
-    except Exception:
-        from langchain_classic import LLMChain
+from langchain.output_parsers import CommaSeparatedListOutputParser
+from langchain import LLMChain
 import datetime
 import constants as ct
 
