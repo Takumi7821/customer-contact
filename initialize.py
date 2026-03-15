@@ -15,7 +15,7 @@ import tiktoken
 from langchain_openai import ChatOpenAI
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.utilities import SerpAPIWrapper
-from langchain.tools import Tool
+from langchain_core.tools import Tool
 from langchain.agents import AgentType, initialize_agent
 import utils
 import constants as ct
