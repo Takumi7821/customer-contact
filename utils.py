@@ -534,7 +534,7 @@ def preprocess_func(text):
         単語分割を実施後のテキスト
     """
 
-    tokenizer_obj = dictionary.Dictionary(dict="full").create()
+    tokenizer_obj = Dictionary(dict="full").create()
     mode = tokenizer.Tokenizer.SplitMode.A
     tokens = tokenizer_obj.tokenize(text ,mode)
     words = [token.surface() for token in tokens]
