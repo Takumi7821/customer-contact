@@ -23,7 +23,7 @@ from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from typing import List
 from sudachipy import tokenizer, Dictionary
 from langchain_community.agent_toolkits import SlackToolkit
-from langchain.agents import AgentType, initialize_agent
+from langchain_cllasic.agents import AgentType, initialize_agent
 from langchain_community.document_loaders.csv_loader import CSVLoader
 from langchain_community.retrievers import BM25Retriever
 from langchain.retrievers import EnsembleRetriever
