@@ -118,6 +118,14 @@ SEARCH_CUSTOMER_COMMUNICATION_INFO_TOOL_DESCRIPTION = "顧客とのやりとり�
 SEARCH_WEB_INFO_TOOL_NAME = "search_web_tool"
 SEARCH_WEB_INFO_TOOL_DESCRIPTION = "自社サービス「HealthX」に関する質問で、Web検索が必要と判断した場合に使う"
 
+# 全データ横断検索ツール
+SEARCH_ALL_INFO_TOOL_NAME = "search_all_info_tool"
+SEARCH_ALL_INFO_TOOL_DESCRIPTION = "社内全データを横断検索したい時に使う"
+
+# Slack通知ツール
+NOTICE_SLACK_TOOL_NAME = "notice_slack_tool"
+NOTICE_SLACK_TOOL_DESCRIPTION = "問い合わせ内容をSlackに通知するために使う"
+
 
 # ==========================================
 # Slack連携関連
@@ -257,6 +265,17 @@ SYSTEM_PROMPT_NOTICE_SLACK = """
     【参照資料】
     ・従業員情報.csv
     ・問い合わせ履歴.csv
+
+
+        # メンション先の選定理由
+        - メンション先として指定する各メンバー（メンションIDが{slack_id_text}のメンバー）について、
+            「なぜそのメンバーを選定したのか」を各メンバーごとに短い箇条書き（1〜3点）で示してください。
+        - 選定理由は必ず「従業員情報」や「過去の問い合わせ対応履歴」などの参照資料に基づいて記述してください。
+        - 出力は以下の形式で行ってください。
+            【メンション先の選定理由】
+            ・<SlackID1>: 理由1; 理由2
+            ・<SlackID2>: 理由1; 理由2
+        - 理由は具体的に、可能な限り根拠を示してください。
 """
 
 

@@ -149,6 +149,19 @@ def initialize_agent_executor():
             func=search.run,
             description=ct.SEARCH_WEB_INFO_TOOL_DESCRIPTION
         )
+        ,
+        # 全データ横断検索用のTool
+        Tool(
+            name = ct.SEARCH_ALL_INFO_TOOL_NAME,
+            func = utils.run_all_doc_chain,
+            description = ct.SEARCH_ALL_INFO_TOOL_DESCRIPTION
+        ),
+        # Slack通知用のTool
+        Tool(
+            name = ct.NOTICE_SLACK_TOOL_NAME,
+            func = utils.notice_slack,
+            description = ct.NOTICE_SLACK_TOOL_DESCRIPTION
+        )
     ]
 
     # Agent Executorの作成
