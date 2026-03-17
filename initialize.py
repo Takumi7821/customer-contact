@@ -12,7 +12,7 @@ from uuid import uuid4
 from dotenv import load_dotenv
 import streamlit as st
 import tiktoken
-from langchain_openai import ChatOpenAI
+from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.utilities import SerpAPIWrapper
 from langchain_core.tools import Tool
