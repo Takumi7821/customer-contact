@@ -12,14 +12,14 @@ from uuid import uuid4
 from dotenv import load_dotenv
 import streamlit as st
 import tiktoken
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.utilities import SerpAPIWrapper
 from langchain_core.tools import Tool
 from langchain_classic.agents import initialize_agent, AgentType
 import utils
 import constants as ct
-
+from langchain_openai import ChatOpenAI
 
 
 ############################################################

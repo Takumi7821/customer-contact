@@ -2,23 +2,6 @@
 このファイルは、Webアプリのメイン処理が記述されたファイルです。
 """
 
-import streamlit as st
-st.write("🟢 Step1: アプリ起動成功")
-
-try:
-    from initialize import initialize
-    st.write("🟢 Step2: 初期化モジュール読み込み成功")
-    
-    initialize()
-    st.write("🟢 Step3: 初期化処理完了")
-    
-except Exception as e:
-    st.error(f"❌ エラー詳細: {str(e)}")
-    st.write(f"❌ エラータイプ: {type(e).__name__}")
-    import traceback
-    st.code(traceback.format_exc())
-
-
 ############################################################
 # ライブラリの読み込み
 ############################################################
@@ -29,6 +12,7 @@ import utils
 from initialize import initialize
 import components as cn
 import constants as ct
+
 
 
 ############################################################

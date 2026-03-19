@@ -1,0 +1,26 @@
+[ERROR] 2026-03-16 05:30:35,636 line 35, in <module>, session_id=a1795166ef514664a5316443fe30c0a4: 初期化処理に失敗しました。
+Could not import chromadb python package. Please install it with `pip install chromadb`.
+[INFO] 2026-03-16 05:33:28,492 line 42, in <module>, session_id=1ec334bdfb424484855d5c38bf8275b4: アプリが起動されました。
+[INFO] 2026-03-16 05:42:41,788 line 42, in <module>, session_id=1a1870bd73ea4883a9757c5837600dea: アプリが起動されました。
+[INFO] 2026-03-16 05:44:37,164 line 42, in <module>, session_id=65b912f06a2441c7ad1666c83783b777: アプリが起動されました。
+[INFO] 2026-03-16 06:22:04,674 line 42, in <module>, session_id=1d9dac76240643d69e5b9ec600cd1f8b: アプリが起動されました。
+[INFO] 2026-03-16 06:27:04,498 line 102, in <module>, session_id=1d9dac76240643d69e5b9ec600cd1f8b: {'message': 'システムにログインできないのですが、'}
+[ERROR] 2026-03-16 06:27:04,503 line 120, in <module>, session_id=1d9dac76240643d69e5b9ec600cd1f8b: ユーザー入力に対しての処理に失敗しました。
+`SlackToolkit` is not fully defined; you should define `WebClient`, then call `SlackToolkit.model_rebuild()`.
+
+For further information visit https://errors.pydantic.dev/2.12/u/class-not-fully-defined
+[INFO] 2026-03-16 06:27:34,109 line 102, in <module>, session_id=1d9dac76240643d69e5b9ec600cd1f8b: {'message': 'システムにログインできないのですが、'}
+[ERROR] 2026-03-16 06:27:34,117 line 120, in <module>, session_id=1d9dac76240643d69e5b9ec600cd1f8b: ユーザー入力に対しての処理に失敗しました。
+`SlackToolkit` is not fully defined; you should define `WebClient`, then call `SlackToolkit.model_rebuild()`.
+
+For further information visit https://errors.pydantic.dev/2.12/u/class-not-fully-defined
+[INFO] 2026-03-16 06:27:57,769 line 102, in <module>, session_id=1d9dac76240643d69e5b9ec600cd1f8b: {'message': 'システムにログインできないのですが、対応方法を教えてください'}
+[ERROR] 2026-03-16 06:27:57,777 line 120, in <module>, session_id=1d9dac76240643d69e5b9ec600cd1f8b: ユーザー入力に対しての処理に失敗しました。
+`SlackToolkit` is not fully defined; you should define `WebClient`, then call `SlackToolkit.model_rebuild()`.
+
+For further information visit https://errors.pydantic.dev/2.12/u/class-not-fully-defined
+[INFO] 2026-03-16 22:09:53,746 line 42, in <module>, session_id=14f6ed0744a04953a98f99af70fdee4c: アプリが起動されました。
+[INFO] 2026-03-16 22:18:17,187 line 42, in <module>, session_id=40ce45b8962f4c9093567da4b54b884b: アプリが起動されました。
+[ERROR] 2026-03-17 09:02:04,161 line 35, in <module>, session_id=a2c253e49841486db025d0f2572d2aac: 初期化処理に失敗しました。
+Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+[INFO] 2026-03-17 09:22:19,013 line 42, in <module>, session_id=21121615aa754ecc882bebc7e263534f: アプリが起動されました。

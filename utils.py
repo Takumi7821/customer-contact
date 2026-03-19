@@ -26,7 +26,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder, Prom
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.output_parsers import CommaSeparatedListOutputParser
 
-from langchain_openai import OpenAIEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 
 from langchain_classic.chains import create_history_aware_retriever, create_retrieval_chain
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
@@ -102,7 +102,9 @@ def create_rag_chain(db_name):
     )
     splitted_docs = text_splitter.split_documents(docs_all)
 
-    embeddings = OpenAIEmbeddings()
+    embeddings = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
+)
 
     # すでに対象のデータベースが作成済みの場合は読み込み、未作成の場合は新規作成する
     if os.path.isdir(db_name):
