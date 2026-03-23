@@ -102,7 +102,7 @@ def create_rag_chain(db_name):
     )
     splitted_docs = text_splitter.split_documents(docs_all)
 
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
     # すでに対象のデータベースが作成済みの場合は読み込み、未作成の場合は新規作成する
     if os.path.isdir(db_name):
@@ -334,7 +334,7 @@ def notice_slack(chat_message):
         docs_all_page_contents.append(doc.page_content)
 
     # Retrieverの作成
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
     db = Chroma.from_documents(docs_all, embedding=embeddings)
     retriever = db.as_retriever(search_kwargs={"k": ct.TOP_K})
     bm25_retriever = BM25Retriever.from_texts(
