@@ -29,7 +29,7 @@ from langchain_core.output_parsers import CommaSeparatedListOutputParser
 from langchain_openai import OpenAIEmbeddings
 
 from langchain_classic.chains import create_history_aware_retriever, create_retrieval_chain
-from langchain_classic.chains.combine_documents import create_stuff_documents_chain
+from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_classic.agents import AgentType, initialize_agent
 from langchain_classic.retrievers import EnsembleRetriever
 from langchain_classic.chains import LLMChain
